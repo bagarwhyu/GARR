@@ -1,45 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CKPTW</title>
-</head>
-<body>
-    <!-- Nav -->
-    <div class="nav">
-        <div class="logo">
-            <h1>BAGARW</h1>
-        </div>
-        <div class="nav-bar">
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Gallery</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>     
-    </div>
-    <section class="home">
-        <video src="img/Tanjiro vs Rui - Kimetsu no Yaiba Episode 19 [1080p].mkv" autoplay muted loop></video>
-        <div class="content">
-            <h1>I dont know <br> What is it.</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro ducimus, autem magnam exercitationem cumque omnis possimus repellendus, nihil, nulla earum modi recusandae aliquid? Obcaecati magnam cupiditate enim perspiciatis consequuntur, architecto excepturi animi est? Voluptates aliquam maiores totam hic quaerat! Excepturi rem deleniti doloribus officiis explicabo laborum voluptas ratione sapiente odio alias sed, omnis labore quo voluptatem repellat aliquam quae! Distinctio nostrum esse exercitationem iste, a autem nesciunt soluta eaque tempora corrupti necessitatibus earum aliquam assumenda excepturi aut non repudiandae modi vel nulla inventore nam unde quasi itaque consequatur? Eveniet, mollitia!</p>
-        </div>
-        <div class="media-icons">
-            <a href="#" class="wa"><img src="img/wa.png" alt=""></a>
-            <a href="#" class="ig"><img src="img/ig.png" alt=""></a>
-        </div>
-    </section>
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: rgb(16, 86, 179);
+}
+
+/* Header */
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vw 2vw 1vw 2vw;
+}
+
+.logo{
+    font-size: 1.5vw;
+    color: white;
+}
+
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar ul li{
+    list-style: none;
+
+}
+
+.nav-bar ul li a{
+    padding: 0 1vw 0 1vw;
+    margin: 0 2vw 0 2vw;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: white;
+    transition: ease 0.3s;
+}
+
+.nav-bar ul li a:hover{
+    background: rgba(26, 6, 49, 0.521);
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.home .content{
+    padding: 100px 200px;
+}
+
+.home .content h1{
+    font-size: 3vw;
+    color: white;
+}
+
+.home .content p{
+    color: white;
+}
+
+.media-icons img{
+    width: 2vw;
+    transition: ease 0.5s;
+}
+
+.media-icons img:hover{
+    width: 2.5vw;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+}
+
+.media-icons{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-icons a{
+    margin: 0.5vw 0 0.5vw 0;
+
+}
+
+.home video{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
